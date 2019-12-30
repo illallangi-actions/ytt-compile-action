@@ -10,3 +10,6 @@ rsync -zarv --exclude ".*/" --include="*/" --include="*.yaml" --exclude="*" "${G
 
 echo ytt --debug --ignore-unknown-comments --strict --file "${temp}" --output yaml --output-directory "${GITHUB_WORKSPACE}/${target}"
 ytt --debug --ignore-unknown-comments --strict --file "${temp}" --output yaml --output-directory "${GITHUB_WORKSPACE}/${target}"
+
+echo chmod -R 755 "${GITHUB_WORKSPACE}/${target}"
+chmod -R 755 "${GITHUB_WORKSPACE}/${target}"
