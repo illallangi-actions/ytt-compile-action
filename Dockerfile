@@ -7,6 +7,6 @@ COPY ./contrib/ytt-linux-amd64 ./contrib/ytt
 RUN install ./contrib/ytt /usr/local/bin
 COPY entrypoint.sh /entrypoint.sh
 
-RUN apk update
+RUN apk update && apk add rsync
 
 ENTRYPOINT ["/entrypoint.sh"]
