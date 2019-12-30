@@ -1,0 +1,6 @@
+name: 'YTT Compile'
+description: 'Compile yaml source using YTT'
+author: 'Andrew Cole'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
